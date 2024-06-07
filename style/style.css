@@ -1,0 +1,137 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: blueviolet;
+    overflow-x: hidden;
+}
+
+/*Test style*/
+.control_icons {
+    width: 10px;
+    height: 50px;
+    visibility: hidden;
+    padding: 1%;
+}
+
+.show_c_icons {
+    visibility: visible;
+}
+
+.hide_form { /* Девизуализация формы входа администратора, при успешной авторизации */
+    display: none;
+}
+#main_container { 
+    width: 100%;
+    background-color: rgb(178, 66, 66);
+}
+#main_container .header_panel {
+    width: 100vw;
+    height: 65px;
+    background-color: #e3e2e2;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+#main_container .header_panel .search_form_block {
+    height: 32%;
+    position: absolute;
+    right: 2%;
+    margin: 10px;
+}
+#main_container .header_panel .logo_block {
+    padding-top: 13px;
+    padding-left: 2%;    
+}
+#main_container .header_panel .logo_block .logo {
+    text-decoration: none;
+    color: black;
+}
+#main_container .header_panel .logo h3 {
+    margin: 0;
+}
+#main_container .center {
+    background-color: #f1f3f0;
+    max-width: 1366px; /* Задана максимальная ширина, по мере уменьшения экрана ширина так же будет подстраиваться */
+    min-height: calc(100vh - 125px);
+    margin: auto;
+}
+#main_container .center .texts {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+}
+#main_container .center .texts p { /* В данном блоке кода устанавливается запрет на выделение любого текста в тегах "p" на всем сайте */
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+#main_container .center .texts .demo_block { 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1%;
+}
+#main_container .center .texts .demo_block .book_text {
+    width: 50%;
+    padding: 1%;
+} 
+#main_container .center .texts .demo_block .book_text h2 {
+    padding: 2%;
+    margin: 0;
+}
+#main_container .center .texts .demo_block .book_illustration {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+#main_container .center .texts .demo_block .book_illustration img{
+    width: 50%;
+}
+#main_container .center h4 {
+    text-align: center;
+    margin: 0;
+    padding: 2%;
+}
+#main_container .footer_panel {
+    width: 100vw;
+    height: 60px;
+    background-color: #e3e2e2;
+    display: flex;
+}
+/* Медиа-запросы */
+@media screen and (max-width: 600px) {
+    /*#main_container .header_panel .search_form_block {
+        height: 32%;
+        position: absolute;
+        right: 2%;
+        margin: 10px;
+    }*/
+    #main_container .header_panel {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #main_container .header_panel .search_form_block {
+        height: 32%;
+        position: static;
+        margin: auto;
+    }
+    #main_container .header_panel .logo_block {
+        padding-top: 0;
+        padding-left: 0;    
+        margin: auto;
+    }
+    #main_container .center .texts .demo_block {
+        flex-direction: column;
+    }
+    #main_container .center .texts .demo_block .book_text {
+        width: 100%;
+    }
+    #main_container .center .texts .demo_block .book_illustration {
+        width: 100%;
+    }
+    #main_container .center .texts .demo_block .book_illustration img{
+        width: 90%;
+    }
+}
